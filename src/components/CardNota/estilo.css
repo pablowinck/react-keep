@@ -9,15 +9,6 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding: 16px;
 }
-.card-nota:hover{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.card-nota:active{
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  background-color: #dddddd;
-}
-
 .card-nota_cabecalho {
   font-size: 1.1em;
   display: flex;
@@ -33,4 +24,12 @@
 .card-nota_titulo {
   font-size: 1.2em;
   margin-right: 12px;
+}
+
+.card-nota_deletesvg:hover {
+  cursor: pointer;
+  background-color: rgb(197, 56, 56);
+}
+.card-nota_deletesvg:active {
+  background-color: rgb(109, 30, 30);
 }
