@@ -25,11 +25,3 @@
   font-size: 1.2em;
   margin-right: 12px;
 }
-
-.card-nota_deletesvg:hover {
-  cursor: pointer;
-  background-color: rgb(197, 56, 56);
-}
-.card-nota_deletesvg:active {
-  background-color: rgb(109, 30, 30);
-}
