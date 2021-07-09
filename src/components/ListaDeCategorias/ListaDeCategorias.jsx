@@ -18,6 +18,7 @@ class ListaDeCategorias extends Component {
       this.props.adicionarCategoria(valorCategoria);
     }
   }
+
   
   render() {
     return (
