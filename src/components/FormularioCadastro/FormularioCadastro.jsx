@@ -74,7 +74,7 @@ class FormularioCadastro extends Component {
           value={this.state.inTexto}
         />
         <button className="form-cadastro_input form-cadastro_submit">
-          Criar Nota
+          Criar
         </button>
       </form>
     );
