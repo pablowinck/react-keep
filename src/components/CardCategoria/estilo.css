@@ -7,6 +7,10 @@
 }
 .lista-categorias_deletesvg{
     margin-left: 10px;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 5px;
+    background-color: white;
 }
 .lista-categorias_deletesvg:hover{
     background-color: rgb(185, 48, 48);

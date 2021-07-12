@@ -9,23 +9,6 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-.lista-categorias_item{
-    background-color: var(--secundaria);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 .lista-categorias_input{
     margin-right: 20px;
-}
-.lista-categorias_deletesvg{
-    margin-left: 10px;
-}
-.lista-categorias_deletesvg:hover{
-    background-color: rgb(185, 48, 48);
-    cursor: pointer;
-}
-.lista-categorias_deletesvg:active{
-    background-color: rgb(121, 28, 28);
 }

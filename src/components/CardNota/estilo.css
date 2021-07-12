@@ -7,7 +7,7 @@
   border-radius: 4px;
   flex-wrap: wrap;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  padding: 16px;
+  padding: 15px;
 }
 .card-nota_cabecalho {
   font-size: 1.1em;
@@ -22,6 +22,26 @@
 }
 
 .card-nota_titulo {
-  font-size: 1.2em;
-  margin-right: 12px;
+  font-size: 1.1em;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+.card-nota_deletesvg{
+  margin-left: 10px;
+}
+.card-nota_deletesvg:hover{
+  background-color: rgb(185, 48, 48);
+  cursor: pointer;
+}
+.card-nota_deletesvg:active{
+  background-color: rgb(121, 28, 28);
+}
+
+.card-nota_categoria{
+  font-size: 0.9em;
+  margin-left: 10px;
+  background-color: var(--secundaria);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
