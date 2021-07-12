@@ -22,4 +22,9 @@ export default class Categorias {
         this.categorias.push(novaCategoria);
         this.notificar();
     }
+
+    apagarCategoria(index){
+        this.categorias.splice(index, 1);
+        this.notificar();
+    }
 }

@@ -3,16 +3,14 @@ import "./estilo.css";
 class FormularioCadastro extends Component {
   constructor(props) {
     super(props);
-    this.titulo = "";
-    this.texto = "";
     this.categoria = "Sem Categoria";
-    this.state = { categorias: [] };
+    this.state = { categorias: [], inTitulo:'', inTexto:''};
 
     this._novasCategorias = this._novasCategorias.bind(this);
   }
 
   componentDidMount() {
-    this.props.categorias.inscrever(this._novasCategorias);
+    this.props.categorias.inscrever(this._novasCategorias);    
   }
 
   componentWillUnmount() {
@@ -25,12 +23,12 @@ class FormularioCadastro extends Component {
 
   _handleMudancaTitulo(evento) {
     evento.stopPropagation();
-    this.titulo = evento.target.value;
+    this.setState({inTitulo: evento.target.value});
   }
 
   _handleMudancaTexto(evento) {
     evento.stopPropagation();
-    this.texto = evento.target.value;
+    this.setState({inTexto: evento.target.value});
   }
 
   _handleMudancaCategoria(evento) {
@@ -41,12 +39,15 @@ class FormularioCadastro extends Component {
   _criarNota(evento) {
     evento.preventDefault();
     evento.stopPropagation();
-    this.props.criarNota(this.titulo, this.texto, this.categoria);
+    this.props.criarNota(this.state.inTitulo, this.state.inTexto, this.categoria);
+    this.setState({inTexto:'',inTitulo:''}); // zera os campos
+    this.tituloInput.focus(); // requere o focus para ele
   }
 
   render() {
     return (
-      <form className="form-cadastro" onSubmit={this._criarNota.bind(this)}>
+      
+      <form className="form-cadastro" onSubmit={this._criarNota.bind(this)}>        
         <select
           className="form-cadastro_input"
           onChange={this._handleMudancaCategoria.bind(this)}
@@ -62,12 +63,15 @@ class FormularioCadastro extends Component {
           placeholder="Título"
           className="form-cadastro_input"
           onChange={this._handleMudancaTitulo.bind(this)}
+          value={this.state.inTitulo}
+          ref={(input) => { this.tituloInput = input; }} // denomina que a variavel tituloInput é referente ao input
         />
         <textarea
           rows={15}
           placeholder="Escreva sua nota..."
           className="form-cadastro_input"
           onChange={this._handleMudancaTexto.bind(this)}
+          value={this.state.inTexto}
         />
         <button className="form-cadastro_input form-cadastro_submit">
           Criar Nota
