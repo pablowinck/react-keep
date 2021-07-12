@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./estilo.css";
-import { ReactComponent as DeleteSVG } from "../../assets/img/delete.svg";
+import CardCategoria from "../CardCategoria";
 class ListaDeCategorias extends Component {
   constructor() {
     super();
@@ -42,13 +42,11 @@ class ListaDeCategorias extends Component {
               index < 6 // só mostra 6 categorias
             ) {
               return (
-                <li key={index} className="lista-categorias_item">
-                  {categoria}
-                  <DeleteSVG
-                    className="lista-categorias_deletesvg"
-                    onClick={this._apagarCategoria(index)}
-                  />
-                </li>
+                <CardCategoria 
+                index={index}
+                categoria={categoria}
+                apagarCategoria={this.props.apagarCategoria}
+                />
               );
             }
             return null;
