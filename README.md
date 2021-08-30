@@ -1,5 +1,5 @@
 # **Projeto do Curso de React da Alura, com Algumas Melhorias**
-## O projeto é basicamente um google keep
+## Esse foi meu primeiro projeto em React!!!
 ### Melhorias:
 *1. Barra de pesquisa tanto pras notas quanto para as categorias;*
 *2. Limpa campos ao adicionar nota, e também ao adicionar categoria;*
